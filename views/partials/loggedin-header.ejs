@@ -20,12 +20,13 @@
             <!-- <img src="icon.png" width="50em" height="50em" style="margin: 10px"></img> -->
             <span style="margin-left: 10px">Letter U</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2" style="margin: 0px;">
-                <ul class="navbar-nav flex-row me-auto" style="margin-left: 20px;">
-                    <li class="nav-item"><a class="nav-link" href="/sent" style="margin-right: 5px;margin-left: 5px;">Sent</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/received" style="margin-right: 5px;margin-left: 5px;">Received</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/compose" style="margin-right: 5px;margin-left: 5px;">Compose</a></li>
-                </ul><strong style="margin-right: 5px;margin-left: 5px;"><%= username %></strong>
-                <a class="btn btn-primary shadow-sm ms-md-2" role="button" href="/logout" style="background: #212529;border-style: none;font-family: Adamina, serif;border-radius: 5px;">Log Out</a>
+                <ul class="navbar-nav me-auto" style="margin-left: 20px;">
+                    <li class="nav-item"><a class="nav-link" href="/sent" style="margin-right: 5px;margin-left: 5px; text-align: right;">Sent</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/received" style="margin-right: 5px;margin-left: 5px; text-align: right;">Received</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/compose" style="margin-right: 5px;margin-left: 5px; text-align: right;">Compose</a></li>
+                </ul>
+                <strong style="margin-right: 5px;margin-left: 5px; text-align: right;" class="nav-item"><%= username %></strong>
+                <a class="btn btn-primary shadow-sm ms-md-2 nav-item" role="button" href="/logout" style="background: #212529;border-style: none;font-family: Adamina, serif;border-radius: 5px;">Log Out</a>
             </div>
         </div>
     </nav>

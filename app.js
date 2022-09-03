@@ -150,7 +150,6 @@ app.get("/received", (req, res) => {
           res.send("Something is wrong. Try again.");
         }
         if (foundLetters) {
-          console.log(foundLetters);
           res.render("received", {
             username: req.user.username,
             receivedLetters: foundLetters,
@@ -180,7 +179,6 @@ app.get("/sent", (req, res) => {
           res.send("Something is wrong. Try again.");
         }
         if (foundLetters) {
-          console.log(foundLetters);
           res.render("sent", {
             username: req.user.username,
             sentLetters: foundLetters,
