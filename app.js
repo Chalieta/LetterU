@@ -60,7 +60,11 @@ passport.deserializeUser(function (id, done) {
 });
 
 app.get("/", (req, res) => {
-  res.render("login");
+  if (req.isAuthenticated()) {
+    res.redirect("/received");
+  } else {
+    res.render("login");
+  }
 });
 
 app.post("/login", (req, res) => {
