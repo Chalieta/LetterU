@@ -1,0 +1,18 @@
+<%- include('partials/loggedin-header', {username: username}) %>
+
+<h1 class="text-center" style="margin: 20px;">Compose</h1>
+        <form class="d-flex flex-column align-items-center" style="max-width: 800px;min-width: 70%;" method="post">
+            <div class="d-flex" style="margin-left: 0%;width: 90%;max-width: 650px;">
+                <h1 class="fs-4" style="margin: 20px;margin-bottom: 5px;margin-right: 0px;margin-left: 0px;">Dear</h1><input class="border rounded-pill form-control" type="text" style="margin: 20px;margin-bottom: 5px;margin-top: 5px;width: 70%;margin-right: 5px;margin-left: 10px;max-width: 300px;" name="to" placeholder="username">
+                <h1 class="fs-4" style="margin: 20px;margin-bottom: 5px;margin-right: 0px;margin-left: 0px;">,</h1>
+            </div><textarea name="content" class="form-control form-control-lg" style="margin: 20px;margin-top: 5px;width: 90%;margin-left: 5%;margin-right: 5%;max-width: 650px;" rows="20"></textarea>
+            <div class="d-flex flex-column align-items-end" style="margin-left: 0%;max-width: 650px;width: 90%;">
+                <h1 class="fs-5 text-end" style="margin: 20px;margin-bottom: 5px;margin-right: 0px;margin-left: 0px;margin-top: 5px;">Sincerely,</h1>
+            <h1 class="fs-6 text-end" style="margin: 10px;margin-bottom: 15px;margin-right: 0px;margin-left: 0px;margin-top: 0px;"><%= username %></h1><button class="btn btn-primary text-center shadow-sm d-lg-flex justify-content-lg-center ms-md-2" type="submit" style="background: rgb(197,197,197);border-style: none;font-family: Adamina, serif;border-radius: 5px;max-width: 90px;text-align: center;margin-bottom: 25px;margin-right: 5px;min-width: 80px;">Send</button>
+            </div>
+        </form>
+    </div>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<%- include('partials/loggedin-header', {username: username}) %>
+
+<h1 class="text-center" style="margin: 20px;">Received Letters</h1>
+<% if (receivedLetters.length === 0) { %>
+    <p class="text-center" style="margin: 20px;">No received letters.</p>
+<% } %>
+
+<% receivedLetters.forEach(letter => { %>
+    <%const date = new Date(Date.parse(letter.date));%>
+    <%const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%>
+    <%const dateString = months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();%>
+
+    <div class="text-start d-flex flex-column align-items-start flex-wrap" style="padding: 20px;border-radius: 5px;max-width: 650px;min-width: 300px;width: 70%;margin: 15px;border: 2px solid rgb(227,227,227) ;">
+        <p class="fs-6 d-flex align-self-end" style="margin-top: 4px;margin-bottom: 16px;"><%= dateString %></p>
+        <h1 class="fs-4">Dear <%= letter.to %>,</h1>
+        <p><%= letter.content %></p>
+        <p class="d-flex align-self-end" style="margin-top: 32px;margin-bottom: 1px;">Sincerely,</p>
+        <p class="d-flex align-self-end" style="margin-top: 4px;"><%= letter.from %></p>
+    </div> 
+<% }) %>
+    </div>
+    <script src="bootstrap.min.js"></script>
+</body>
+
+</html>
